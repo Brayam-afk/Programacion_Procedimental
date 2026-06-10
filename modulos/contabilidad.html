@@ -18,7 +18,7 @@
     <div class="field.nombre">
         <label class="label">Ventas</label>
         <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+            <input id="ventas" class="input is-success" type="text" placeholder="Text input" value="bulma">
             <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
             </span>
@@ -33,14 +33,12 @@
         <form>
            <label for="birthday">Fecha</label>
            <input type="date" id="birthday" name="birthday" required>
-
-            <input type="submit" value="Submit">
         </form>
     </div>
     <div class="field.nombre">
         <label class="label">Ingresos</label>
         <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+            <input id="ingresos" class="input is-success" type="text" placeholder="text input" value="1">
             <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
             </span>
@@ -53,7 +51,7 @@
     <div class="field.nombre">
         <label class="label">Engresos</label>
         <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+            <input id="engresos" class="input is-success" type="text" placeholder="Text input" value="bulma">
             <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
             </span>
@@ -66,7 +64,7 @@
     <div class="field.nombre">
         <label class="label">Concepto</label>
         <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+            <input id="concepto" class="input is-success" type="text" placeholder="Text input" value="bulma">
             <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
             </span>
@@ -79,7 +77,7 @@
     <div class="field.nombre">
         <label class="label">Valor</label>
         <div class="control has-icons-left has-icons-right">
-            <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+            <input id="valor" class="input is-success" type="text" placeholder="Text input" value="bulma">
             <span class="icon is-small is-left">
                 <i class="fas fa-user"></i>
             </span>
@@ -93,12 +91,13 @@
 
     <div class="field is-grouped"></div>
         <div class="control">
-            <button class="button is-link">Enviar</button>
+            <button class="button is-link" onclick="ValidarDatosContabilidad()">Enviar</button>
         </div>
         <div class="control">
             <a class="button is-link is-light" type="button" href="/index.html">Volver al Inicio
             </a>
         </div>
     </div>
+    <script src="../JS/contabilidad.js"></script>
 </body>
 </html>
