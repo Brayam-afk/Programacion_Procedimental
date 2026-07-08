@@ -14,34 +14,49 @@ function ValidarDatos() {
     if (nombre.value != "" && direccion.value != "" && correo.value != "" && contraseña.value != "" && nacimiento.value != "" && documento.value != "" && profesion.value != "") {
 
         if (/\d/.test(nombre.value)) {
-            alert("El nombre  no debe contener números.");
+            Swal.fire({
+  icon: "error",
+  title: "Algo Salio Mal...",
+  text: "El campo nombre no debe contener números.",
+  
+});
         }
 
         if (correo.value.indexOf("@") === -1) {
-            alert("El correo debe contener @.");
+             Swal.fire({
+  icon: "error",
+  title: "Algo Salio Mal...",
+  text: "El campo correo debe contener @.",
+  
+});
         }
 
         if (contraseña.value.length < 8) {
-            alert("La contraseña debe tener al menos 8 caracteres.");
+             Swal.fire({
+  icon: "error",
+  title: "Algo Salio Mal...",
+  text: "El campo contraseña debe tener al menos 8 caracteres.",
+  
+});
         }
 
         if (!/^\d+$/.test(documento.value)) {
-            alert("El documento debe contener solo números.");
+             Swal.fire({
+  icon: "error",
+  title: "Algo Salio Mal...",
+  text: "El campo documento debe contener solo números.",
+  
+});
         }
 
     } else {
-        alert("Por favor, complete todos los campos.");
+        Swal.fire({
+  title: "Algo Salio Mal...",
+  text: "Por favor, complete todos los campos.",
+  icon: "error"
+});
     }
 }
 
-
-
-
-
-
-
-
-
-
-
+document.getElementById("btnenviar").onclick = ValidarDatos;
 

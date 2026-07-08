@@ -29,3 +29,5 @@ if(/[a-zA-Z]/.test(valor.value)) {
         alert("Por favor, complete todos los campos.");
     }
 }
+
+document.getElementById("btnenviar").onclick = ValidarDatosContabilidad;
