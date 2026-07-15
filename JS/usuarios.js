@@ -20,6 +20,7 @@ function ValidarDatos() {
         text: "El campo nombre no debe contener números.",
 
       });
+      return;
     }
 
     if (correo.value.indexOf("@") === -1) {
@@ -28,7 +29,7 @@ function ValidarDatos() {
         title: "Algo Salio Mal...",
         text: "El campo correo debe contener @.",
 
-      });
+      });return;
     }
 
     if (contraseña.value.length < 8) {
@@ -38,6 +39,7 @@ function ValidarDatos() {
         text: "El campo contraseña debe tener al menos 8 caracteres.",
 
       });
+      return;
     }
 
     if (!/^\d+$/.test(documento.value)) {
@@ -47,6 +49,7 @@ function ValidarDatos() {
         text: "El campo documento debe contener solo números.",
 
       });
+      return;
     }
     console.log("nombre: " + nombre.value);
     console.log("direccion: " + direccion.value);
@@ -75,6 +78,7 @@ function ValidarDatos() {
       text: "Por favor, complete todos los campos.",
       icon: "error"
     });
+    return;
   }
 }
 
